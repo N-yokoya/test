@@ -1,0 +1,13 @@
+ファイアウォールを通すために
+cmdを管理者として実行し
+以下を実行　ただしptyho.exeは自機のptyhon38フォルダアドレスに変更すること
+netsh advfirewall firewall add rule name="Python app" dir=in action=allow program="C:\Python38\python.exe" enable=yes profile=any description="Allow Python app"
+
+
+自機のptyho38フォルダアドレス
+C:\Users\nobuaki\AppData\Local\Programs\Python\Python38
+
+
+以下のコマンドとなる
+
+netsh advfirewall firewall add rule name="Python app" dir=in action=allow program="C:\Users\nobuaki\AppData\Local\Programs\Python\Python38\python.exe" enable=yes profile=any description="Allow Python app"
